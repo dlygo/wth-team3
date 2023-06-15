@@ -1,15 +1,24 @@
 on: workflow_dispatch
-
 jobs:
-  job1:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "this is job 1"
-          echo "this is second line in job 1"
-      
-  job2:
-    needs: job1
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "this is job 2"
+
+      # Checkout code
+    #- uses: actions/checkout@main
+
+      # Log into Azure
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.TBL03_SECRET }}
+
+      # Deploy ARM template
+    - name: Run ARM deploy
+      uses: azure/arm-deploy@v1
+      with:
+        subscriptionId: ${{ secrets.subId }}
+        resourceGroupName: ${{ vars.TBL03_VARIABLE }}
+        template: ./azuredeploy.json
+
+      # output containerName variable from template
+    - run: echo ${{ steps.deploy.outputs.containerName }}
