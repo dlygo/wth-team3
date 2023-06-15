@@ -3,11 +3,11 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
-            "defaultValue": "tbl03_devops-dev",
+            "defaultValue": "tbl03-devops-dev",
             "type": "String"
         },
         "hostingPlanName": {
-            "defaultValue": "tbl03_devops-asp",
+            "defaultValue": "tbl03-devops-asp",
             "type": "String"
         },
         "appInsightsLocation": {
@@ -15,7 +15,7 @@
             "type": "String"
         },
         "appInsightsName": {
-            "defaultValue": "tbl03_devops-ai",
+            "defaultValue": "tbl03-devops-ai",
             "type": "String"
         },        
         "sku": {
@@ -23,11 +23,11 @@
             "type": "String"
         },
         "registryName": {
-            "defaultValue": "tbl03_devopsreg",
+            "defaultValue": "tbl03-devopsreg",
             "type": "String"
         },
         "imageName": {
-            "defaultValue": "tbl03_devopsimage",
+            "defaultValue": "tbl03-devopsimage",
             "type":"String"
         },
         "registryLocation": {
