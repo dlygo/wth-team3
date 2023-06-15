@@ -1,5 +1,5 @@
 jobs:
   job1:
-    name: My first job
+    - echo "this is first job"
   job2:
-    name: My second job
+    - echo "this is second job"
