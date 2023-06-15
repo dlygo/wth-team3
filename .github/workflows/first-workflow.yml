@@ -1,0 +1,5 @@
+jobs:
+  job1:
+    name: My first job
+  job2:
+    name: My second job
