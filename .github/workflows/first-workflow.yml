@@ -9,6 +9,7 @@ jobs:
           echo "this is second line in job 1"
       
   job2:
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - run: echo "this is job 2"
