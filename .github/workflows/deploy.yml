@@ -18,7 +18,7 @@ jobs:
       with:
         subscriptionId: ${{ secrets.subId }}
         resourceGroupName: ${{ vars.TBL03_VARIABLE }}
-        template: ./container-webapp-template.json
+        template: ./ARM-Templates/container-webapp-template.json
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
