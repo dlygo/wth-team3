@@ -4,7 +4,10 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is job 1"
+      - run: |
+          echo "this is job 1"
+          echo "this is second line in job 1"
+      
   job2:
     runs-on: ubuntu-latest
     steps:
