@@ -19,6 +19,7 @@ jobs:
         subscriptionId: ${{ secrets.subId }}
         resourceGroupName: ${{ vars.TBL03_VARIABLE }}
         template: ./ARM-Templates/container-webapp-template.json
+        parameters: webAppName=${{ vars.TARGETENV }}
 
       # output containerName variable from template
     - run: echo ${{ steps.deploy.outputs.containerName }}
